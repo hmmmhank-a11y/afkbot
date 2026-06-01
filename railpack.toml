@@ -1,5 +1,0 @@
-[build]
-cmd = "unzip -o botcontrol.zip && pnpm --filter @workspace/dashboard run build"
-
-[start]
-cmd = "pnpm --filter @workspace/bot start"
