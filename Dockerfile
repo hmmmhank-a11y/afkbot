@@ -17,6 +17,6 @@ WORKDIR /app/dashboard
 RUN pnpm install
 RUN pnpm exec vite build
 
-# Start the bot
+# Start the bot - try common entry points
 WORKDIR /app/bot
-CMD ["pnpm", "start"]
+CMD node artifacts/api-server/dist/index.js || node dist/index.js || node index.js
